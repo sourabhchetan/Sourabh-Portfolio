@@ -134,4 +134,4 @@ A smart productivity-focused To-Do application with countdown timers and local s
 
 # ⭐ If You Like This Portfolio
 
-Give this repository a ⭐ on Gi
+Give this repository a ⭐ on GitHub
