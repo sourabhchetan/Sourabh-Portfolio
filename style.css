@@ -40,11 +40,32 @@ body{
 }
 
 /* ===== LOGO ===== */
-.nav h1{
-    color:white;
-    font-size:1.7rem;
+
+.logo{
+    font-size:1.9rem;
     font-weight:700;
+
+    color:cyan;
+
     letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    text-shadow:
+    0 0 10px rgba(0,255,255,0.5);
+}
+
+.logo span{
+    color:white;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+
+    text-shadow:
+    0 0 18px rgba(0,255,255,0.8);
 }
 
 /* ===== NAV LINKS ===== */
