@@ -1,19 +1,24 @@
 // ===== NAVBAR TOGGLE =====
+
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
 hamburger.addEventListener("click", () => {
+
     navLinks.classList.toggle("show-menu");
 
-    // Change hamburger icon
+    // CHANGE ICON
     hamburger.innerHTML = navLinks.classList.contains("show-menu")
         ? '<i class="fas fa-times"></i>'
         : '<i class="fas fa-bars"></i>';
+
 });
 
 
-// ===== HIDE NAVBAR ON SCROLL DOWN =====
+// ===== HIDE NAVBAR ON SCROLL =====
+
 let lastScroll = 0;
+
 const navbar = document.querySelector(".nav");
 
 window.addEventListener("scroll", () => {
@@ -22,15 +27,19 @@ window.addEventListener("scroll", () => {
 
     if (currentScroll > lastScroll) {
         navbar.classList.add("hide-nav");
-    } else {
+    }
+
+    else {
         navbar.classList.remove("hide-nav");
     }
 
     lastScroll = currentScroll;
+
 });
 
 
 // ===== ACTIVE NAV LINKS =====
+
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".nav-links a");
 
@@ -42,7 +51,7 @@ window.addEventListener("scroll", () => {
 
         const sectionTop = section.offsetTop;
 
-        if (pageYOffset >= sectionTop - 200) {
+        if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute("id");
         }
 
@@ -58,12 +67,4 @@ window.addEventListener("scroll", () => {
 
     });
 
-});
-// ===== MOBILE NAVBAR =====
-
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show-menu");
 });
